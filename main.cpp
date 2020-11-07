@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include <stdlib.h>
 #include <windows.h>
 
 using namespace std;
