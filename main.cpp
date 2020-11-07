@@ -26,9 +26,7 @@ int MENU() {
     MenuBoxes("0 - QuitScreen");
     MenuBoxes("1 - letterToASCII");
     MenuBoxes("2 - asciiToLetter");
-    MenuBoxes("3 - Information");
-    MenuBoxes("9 - Test Case!");
-    colored_cout("Choose a lesson sequence from the menu:", 10, false);
+    colored_cout("Choose a sequence from the menu (0/1/2):", 10, false);
     cout << " ";
     int choice;
     cin >> choice;
@@ -36,8 +34,6 @@ int MENU() {
     	case 0 : return 0;
     	case 1 : letterToASCII(); break;
     	case 2 : asciiToLetter(); break;
-    	case 3 : information(); break;
-    	case 9 : test_case(); break;
     	default :{
     		colored_cout("Wrong Choice!!", 4, true);
 			goBackMain();
@@ -97,11 +93,6 @@ void asciiToLetter() {
     goBackMain();
 }
 
-void information() {
-    cout << "In progress..";
-    goBackMain();
-}
-
 void goBackMain() {
     string back;
     cout << endl << endl << "Are you want to go back menu? [yes/no]" << endl << "Answer: ";
@@ -132,17 +123,8 @@ void MenuBoxes(string menu_Name) {
 }
 
 void colored_cout(string text, int color, bool endline) {
-    if (endline == true) {
-        SetConsoleTextAttribute(hconsole, color);
-        cout << text << endl;
-        SetConsoleTextAttribute(hconsole, 15);
-    } else {
-        SetConsoleTextAttribute(hconsole, color);
-        cout << text;
-        SetConsoleTextAttribute(hconsole, 15);
-    }
-}
-
-void test_case() {
-
+    SetConsoleTextAttribute(hconsole, color);
+    cout << text;
+    SetConsoleTextAttribute(hconsole, 15);
+    if(endline==true) cout << endl;    
 }
