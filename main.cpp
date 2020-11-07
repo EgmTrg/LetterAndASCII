@@ -8,10 +8,8 @@ using namespace std;
 void letterToASCII();
 void asciiToLetter();
 void goBackMain();
-void information();
 void colored_cout(string text, int color, bool endl);
 void MenuBoxes(string menu_Name);
-void test_case();
 int MENU();
 
 HANDLE hconsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -108,12 +106,10 @@ void MenuBoxes(string menu_Name) {
         cout << char(205);
     }
     cout << char(187) << endl;
-    if (menu_Name == "0 - QuitScreen" || menu_Name == "9 - Test Case!") {
+    if (menu_Name == "0 - QuitScreen") {
         cout << char(186) << "  " << menu_Name << "     " << char(186) << endl;
     } else if (menu_Name == "1 - letterToASCII" || menu_Name == "2 - asciiToLetter") {
         cout << char(186) << "  " << menu_Name << "  " << char(186) << endl;
-    } else if (menu_Name == "3 - Information") {
-        cout << char(186) << "  " << menu_Name << "    " << char(186) << endl;
     }
     cout << char(200);
     for (int i = 0; i < 21; i++) {
