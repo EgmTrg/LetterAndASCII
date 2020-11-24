@@ -60,7 +60,7 @@ void asciiToLetter() {
     string ascii_Numbers, ascii_Numbers_PART, purpose;
     int temp_INT;
     char temp_CHAR;
-    cout << "What are you write in here? [url/text]" << endl << "Answer: ";
+    cout << "What are you want to write in here? [url/text]" << endl << "Answer: ";
     cin >> purpose;
     cout << endl << "Input ASCII Numbers: ";
     cin >> ascii_Numbers;
@@ -92,7 +92,7 @@ void asciiToLetter() {
 
 void goBackMain() {
     string back;
-    cout << endl << endl << "Are you want to go back menu? [yes/no]" << endl << "Answer: ";
+    cout << endl << endl << "Are you want to go back main menu? [yes/no]" << endl << "Answer: ";
     cin >> back;
     if (back == "yes" || back == "YES") {
         MENU();
